@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FITPOWER | Спортивное питание</title>
+    <meta
+      name="description"
+      content="FITPOWER — спортивное питание, добавки и аксессуары для тренировок."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="#home" class="logo" aria-label="FITPOWER">
+          <span class="logo-mark"></span>
+          <span>FITPOWER</span>
+        </a>
+
+        <nav class="nav" aria-label="Главное меню">
+          <a href="#home">Главная</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#categories">Категории</a>
+          <a href="#about">О нас</a>
+          <a href="#contacts">Контакты</a>
+          <button class="cart-trigger" id="cartToggle" type="button">
+            <span>🛒</span>
+            <span>Корзина</span>
+            <span class="cart-num" id="cartCount">0</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <span class="eyebrow">FITPOWER</span>
+            <h1>Питайся правильно. Тренируйся сильнее.</h1>
+            <p>
+              Спортивное питание для силы, выносливости и стабильного прогресса.
+              Выбирайте проверенные добавки, которые помогут вам достигать
+              результатов быстрее без лишних компромиссов.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#catalog">Перейти к товарам</a>
+              <a class="btn btn-secondary" href="#about">Узнать больше</a>
+            </div>
+
+            <div class="metrics">
+              <div>
+                <strong>12k+</strong>
+                <span>клиентов</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>рейтинг</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span>поддержка</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image"></div>
+            <div class="promo-card">
+              <strong>Pro Series</strong>
+              <span>Новый набор для роста силы</span>
+            </div>
+          </div>
+        </div>
+        а
+      </section>
+
+      <section class="section" id="categories">
+        <div class="container">
+          <div class="section-header">
+            <h2>Популярные категории</h2>
+            <p>Подборки под ваши цели.</p>
+          </div>
+          <div class="category-grid" id="categoriesGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="catalog">
+        <div class="container">
+          <div class="section-header">
+            <h2>Каталог товаров</h2>
+            <p id="catalogStatus">Все товары</p>
+          </div>
+
+          <div class="catalog-toolbar">
+            <div class="search-box">
+              <span>🔍</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Поиск товара..."
+              />
+            </div>
+
+            <div class="toolbar-right">
+              <div class="filter-row" aria-label="Фильтрация по категории">
+                <button
+                  class="filter-btn active"
+                  type="button"
+                  data-category="all"
+                >
+                  Все
+                </button>
+                <button
+                  class="filter-btn"
+                  type="button"
+                  data-category="Протеин"
+                >
+                  Протеин
+                </button>
+                <button
+                  class="filter-btn"
+                  type="button"
+                  data-category="Креатин"
+                >
+                  Креатин
+                </button>
+                <button
+                  class="filter-btn"
+                  type="button"
+                  data-category="Гейнеры"
+                >
+                  Гейнеры
+                </button>
+              </div>
+
+              <select id="sortSelect" aria-label="Сортировка">
+                <option value="popular">По популярности</option>
+                <option value="price-asc">Сначала дешевые</option>
+                <option value="price-desc">Сначала дорогие</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="product-grid" id="catalogGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="popular">
+        <div class="container">
+          <div class="section-header">
+            <h2>Лучшие предложения</h2>
+            <p>Популярные позиции сезона.</p>
+          </div>
+          <div class="product-grid" id="popularGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <h2>Почему выбирают FITPOWER</h2>
+            <p>Профессиональный подход и проверенные решения.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">✅</div>
+              <h3>Проверенные составы</h3>
+              <p>
+                Только качественные ингредиенты и прозрачные формулы для вашего
+                прогресса.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">🚚</div>
+              <h3>Быстрая доставка</h3>
+              <p>Отправка по всей России, удобно и без лишних задержек.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">💬</div>
+              <h3>Поддержка экспертов</h3>
+              <p>
+                Наши специалисты помогут подобрать продукт под вашу цель и
+                нагрузку.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="container">
+          <div class="section-header">
+            <h2>Отзывы покупателей</h2>
+            <p>Реальные результаты и честные отзывы.</p>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                «Очень полезный магазин. Протеин и креатин реально помогли в
+                силе и восстановлении.»
+              </p>
+              <div class="person">
+                <div class="avatar">А</div>
+                <div>
+                  <strong>Алексей</strong>
+                  <small>силовой атлет</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                «Менеджер помог подобрать набор именно под мой режим тренировок.
+                Всё очень удобно.»
+              </p>
+              <div class="person">
+                <div class="avatar">И</div>
+                <div>
+                  <strong>Ирина</strong>
+                  <small>бегунья</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                «Доставка быстрая, качество продукции отличное, и цены
+                адекватные для такого уровня.»
+              </p>
+              <div class="person">
+                <div class="avatar">Д</div>
+                <div>
+                  <strong>Дмитрий</strong>
+                  <small>фитнес-тренер</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container footer-grid">
+        <div>
+          <a href="#home" class="logo" aria-label="FITPOWER">
+            <span class="logo-mark"></span>
+            <span>FITPOWER</span>
+          </a>
+          <p class="footer-text">
+            Современное спортивное питание для силовых тренировок, набора массы
+            и качественной работы над собой.
+          </p>
+        </div>
+
+        <div>
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#categories">Категории</a></li>
+            <li><a href="#about">О нас</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Категории</h4>
+          <ul>
+            <li><a href="#catalog">Протеин</a></li>
+            <li><a href="#catalog">Креатин</a></li>
+            <li><a href="#catalog">Гейнеры</a></li>
+            <li><a href="#catalog">Витамины</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Контакты</h4>
+          <ul>
+            <li>г. Москва, ул. Спортивная, 14</li>
+            <li>+7 (499) 123-45-67</li>
+            <li>hello@fitpower.ru</li>
+            <li>Пн–Вс: 09:00–22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 FITPOWER. Все права защищены.</span>
+        <span>Политика конфиденциальности</span>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Корзина">
+      <div class="cart-header">
+        <h3>Корзина</h3>
+        <button class="close-cart" id="closeCart" aria-label="Закрыть корзину">
+          ×
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Итого</span>
+          <strong id="cartTotal">0 ₽</strong>
+        </div>
+        <button
+          class="btn btn-primary checkout-btn"
+          type="button"
+          id="checkoutBtn"
+        >
+          Оформить заказ
+        </button>
+      </div>
+    </aside>
+
+    <div class="modal" id="productModal" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
